@@ -5,6 +5,7 @@
 // Instructor name: Yeung
 // Purpose: wowie zowie
 // wankerboi
+// hot potato
 
 #include "customer.h"
 #include "burger.h"
