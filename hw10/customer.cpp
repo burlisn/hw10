@@ -4,6 +4,7 @@
 // Course number & section: 1570 C
 // Instructor name: Yeung
 // Purpose: wowie zowie
+// wankerboi
 
 #include "customer.h"
 #include "burger.h"
