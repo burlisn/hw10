@@ -7,10 +7,16 @@
 
 #include "burger.h"
 #include "customer.h"
+#include "burgermeister.h"
 
 using namespace std;
 
 int main()
 {
+  Burgermeister a("Krusty",3.50);
+  a-=5.00;
+  cout << a.getCashMoney() << endl;
+  cout << a.getName() << endl;
+
   return 0;
 }
