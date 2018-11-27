@@ -3,11 +3,7 @@
 // Filename: customer.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: wowie zowie
-// wankerboi
-// hot potato
-// Kris Parsons is a hoe
-// DOTA 2 7.20 is gay
+// Purpose: 
 
 #include "customer.h"
 #include "burger.h"

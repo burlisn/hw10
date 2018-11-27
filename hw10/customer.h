@@ -4,8 +4,6 @@
 // Course number & section: 1570 C
 // Instructor name: Yeung
 // Purpose:
-// Orange carrots
-// yellow bananan
 
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
