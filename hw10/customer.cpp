@@ -1,4 +1,4 @@
-// Programmer: Nathan Burlis
+// Programmer: Nathan Burlis & Mathew Romine
 // Date: 11/08/2018
 // Filename: customer.cpp
 // Course number & section: 1570 C
