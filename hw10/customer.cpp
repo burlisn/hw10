@@ -18,6 +18,7 @@ Customer::Customer()
   m_weight=(rand()%161)+90;
   m_chol=(rand()%271)+30;
   m_isAlive=1;
+  m_hp=rand()%100+1;
 }
 
 //Eat function

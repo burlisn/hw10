@@ -13,10 +13,20 @@ using namespace std;
 
 int main()
 {
-  Burgermeister a("Krusty",3.50);
-  a-=5.00;
-  cout << a.getCashMoney() << endl;
-  cout << a.getName() << endl;
+  srand(time(NULL));
+
+  cout.setf(ios::fixed); 
+  cout.setf(ios::showpoint); 
+  cout.precision(2);
+  cout.setf(ios::boolalpha);
+
+  cout<<"---------Customers with default constructor----------"<<endl;
+  Customer customers[24];
+  for(int i=0;i<24;i++)
+  {
+    cout<<customers[i]<<endl;
+  }
+  cout<<endl;
 
   return 0;
 }

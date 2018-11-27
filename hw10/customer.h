@@ -59,6 +59,7 @@ class Customer
     double m_weight;
     short m_chol; //Cholesterol level
     bool m_isAlive; //Is the Customer alive?
+    int m_hp; //Customers health points
 
     int m_nameCount=0;//Where the count is on the name file
 
