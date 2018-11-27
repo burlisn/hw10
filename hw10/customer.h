@@ -4,6 +4,7 @@
 // Course number & section: 1570 C
 // Instructor name: Yeung
 // Purpose:
+// Orange carrots
 
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
