@@ -7,6 +7,7 @@
 // wankerboi
 // hot potato
 // Kris Parsons is a hoe
+// RT bro ^ 
 
 #include "customer.h"
 #include "burger.h"
