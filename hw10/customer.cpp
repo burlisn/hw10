@@ -7,7 +7,7 @@
 // wankerboi
 // hot potato
 // Kris Parsons is a hoe
-// RT bro ^ 
+// DOTA 2 7.20 is gay
 
 #include "customer.h"
 #include "burger.h"
