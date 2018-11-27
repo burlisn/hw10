@@ -6,6 +6,7 @@
 // Purpose: wowie zowie
 // wankerboi
 // hot potato
+// Kris Parsons is a hoe
 
 #include "customer.h"
 #include "burger.h"
