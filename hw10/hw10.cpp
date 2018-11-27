@@ -5,6 +5,7 @@
 // Instructor name: Yeung
 // Purpose:
 
+#include <iostream>
 #include "burger.h"
 #include "customer.h"
 #include "burgermeister.h"
