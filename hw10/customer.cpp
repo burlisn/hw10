@@ -39,10 +39,23 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
 
+    //HP loss from eating burger
+    m_hp=m_hp-2;
+
     //Dead boy?
     if(mystery.isPathogen())
     {
-      m_isAlive=0;
+      int diceRoll=rand()%101;
+      if(diceRoll>m_hp)
+      {
+        m_isAlive=0;
+        m_hp=0;
+      }
+      else
+      {
+        //vomit
+        m_hp=m_hp/2;
+      }
     }
     else
     {
@@ -60,7 +73,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
 }
 
 //insertion operator overload
-ostream& operator<<(ostream& os, const Customer rhs)
+ostream& operator<<(ostream& os, const Customer& rhs)
 {
   string deadAlive;
   if(rhs.isAlive())
@@ -72,7 +85,8 @@ ostream& operator<<(ostream& os, const Customer rhs)
     deadAlive="DEAD";
   }
   os<<rhs.name()<<" weighs "<<rhs.weight()<<" lbs, has $"<<rhs.cashMoney()
-    <<","<<rhs.chol()<<" IBU and is "<<deadAlive<<".";
+    <<", "<<rhs.chol()<<" IBU and is "<<deadAlive<<" with "<<rhs.hp()
+    <<" health.";
   return os;
 }
 
@@ -100,6 +114,11 @@ bool Customer::isAlive() const
 string Customer::name() const
 {
   return(m_name);
+}
+
+int Customer::hp() const
+{
+  return(m_hp);
 }
 /************************************************/
 

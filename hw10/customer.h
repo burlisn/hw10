@@ -46,13 +46,14 @@ class Customer
     short chol() const;
     bool isAlive() const;
     string name() const;
+    int hp() const;
 
     //insertion operator overlaod
     //Description: Overloads the insertion operator to output status of
     //            member variables of Customer
     //Pre: Customer is created
     //Post: Status of member variables is outputed
-    friend ostream& operator<<(ostream& os, const Customer rhs);
+    friend ostream& operator<<(ostream& os, const Customer& rhs);
 
   private:
     string m_name;
