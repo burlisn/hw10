@@ -23,6 +23,10 @@ int main()
 
   int roundNumber=0;
   Customer customers[15];
+  for(int i=0;i<15;i++)
+  {
+    cout<<customers[i]<<endl;
+  }
 
   return 0;
 }
