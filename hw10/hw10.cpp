@@ -21,15 +21,8 @@ int main()
   cout.precision(2);
   cout.setf(ios::boolalpha);
 
+  int roundNumber=0;
   Customer customers[15];
-  for(int i=0; i<15; i++)
-  {
-    cout<<customers[i]<<endl;
-  }
-  Burger b1;
-  cout<<b1<<endl;
-  customers[0].eat(b1);
-  cout<<customers[0]<<endl;
 
   return 0;
 }
