@@ -7,6 +7,7 @@
 
 #include "customer.h"
 #include "burger.h"
+#include "burgermeister.h"
 
 using namespace std;
 
@@ -22,9 +23,9 @@ Customer::Customer()
 }
 
 //Eat function
-void Customer::eat(const Burger mystery)
+void Customer::eat(const Burger mystery, Burgermeister& krusty)
 {
-  if(mystery.validEntry())
+  if (canEat(mystery)&&mystery.validEntry())
   {
     //Cash money dolla dolla bills yall
     m_cashMoney=m_cashMoney-mystery.getPrice();
@@ -47,6 +48,9 @@ void Customer::eat(const Burger mystery)
     {
       m_isAlive=1;
     }
+
+    //Pay Krusty
+    krusty+=mystery.getPrice();
   }
   else
   {
@@ -113,4 +117,9 @@ void Customer::randomName()
   numRun++;
   names.close();
   return;
+}
+
+bool Customer::canEat(const Burger burg) const
+{
+  return(m_isAlive&&m_cashMoney>=burg.getPrice());
 }

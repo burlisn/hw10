@@ -21,11 +21,17 @@ int main()
   cout.precision(2);
   cout.setf(ios::boolalpha);
 
+  Burgermeister krusty("Krusty",100);
   int roundNumber=0;
   Customer customers[15];
-  for(int i=0;i<15;i++)
+  
+  for(int i=0;i<20;i++)
   {
-    cout<<customers[i]<<endl;
+    cout<<customers[0]<<endl;
+    Burger a;
+    cout<<a<<endl;
+    customers[0].eat(a,krusty);
+    cout<<krusty.getCashMoney()<<endl;
   }
 
   return 0;

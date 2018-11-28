@@ -9,6 +9,7 @@
 #define CUSTOMER_H
 
 #include "burger.h"
+#include "burgermeister.h"
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
@@ -34,7 +35,7 @@ class Customer
     //Pre: Customer is created and burger is created
     //Post: Customer money, weight, cholesterol, and Alive status is affected
     //      by the eaten burger
-    void eat(const Burger mystery);
+    void eat(const Burger mystery, Burgermeister& krusty);
 
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
@@ -67,6 +68,8 @@ class Customer
     //Pre: None
     //Post: Random name from the file is pulled for a new Customer
     void randomName();
+
+    bool canEat(const Burger burg) const;
 };
 
 #endif
