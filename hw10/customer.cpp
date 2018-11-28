@@ -3,7 +3,7 @@
 // Filename: customer.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: 
+// Purpose: test test
 
 #include "customer.h"
 #include "burger.h"
