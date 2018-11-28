@@ -25,7 +25,7 @@ Customer::Customer()
 //Eat function
 void Customer::eat(const Burger mystery, Burgermeister& krusty)
 {
-  if (canEat(mystery)&&mystery.validEntry())
+  if (mystery.validEntry())
   {
     //Cash money dolla dolla bills yall
     m_cashMoney=m_cashMoney-mystery.getPrice();
@@ -39,7 +39,10 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
 
-    //Dead boy?
+    //Health decrease
+    m_hp=m_hp-2;
+
+    //Dead boy or vomit?
     if(mystery.isPathogen())
     {
       m_isAlive=0;

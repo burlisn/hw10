@@ -37,6 +37,8 @@ class Customer
     //      by the eaten burger
     void eat(const Burger mystery, Burgermeister& krusty);
 
+    bool canEat(const Burger burg) const;
+
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
     //Pre: Nothing
@@ -69,7 +71,7 @@ class Customer
     //Post: Random name from the file is pulled for a new Customer
     void randomName();
 
-    bool canEat(const Burger burg) const;
+    
 };
 
 #endif
