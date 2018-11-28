@@ -10,6 +10,8 @@
 #include "customer.h"
 #include "burgermeister.h"
 
+#include <iostream>
+
 using namespace std;
 
 int main()
@@ -22,17 +24,16 @@ int main()
   cout.setf(ios::boolalpha);
 
   Burgermeister krusty("Krusty",100);
-  int roundNumber=0;
-  Customer customers[15];
+  //int roundNumber=0;
+  Customer customer[15];
   
   for(int i=0;i<20;i++)
   {
-    cout<<customers[0]<<endl;
+    cout<<customer[0]<<endl;
     Burger a;
     cout<<a<<endl;
-    customers[0].eat(a,krusty);
+    customer[0].eat(a,krusty);
     cout<<krusty.getCashMoney()<<endl;
   }
-
   return 0;
 }

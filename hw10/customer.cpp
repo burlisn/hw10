@@ -11,7 +11,7 @@
 
 using namespace std;
 
-//Constructor
+/***************Constructor********************************/
 Customer::Customer()
 {
   Customer::randomName();
@@ -21,11 +21,13 @@ Customer::Customer()
   m_isAlive=1;
   m_hp=rand()%100+1;
 }
+/**********************************************************/
 
+/*******************Public functions(but not getters)*****************/
 //Eat function
 void Customer::eat(const Burger mystery, Burgermeister& krusty)
 {
-  if (canEat(mystery)&&mystery.validEntry())
+  if (mystery.validEntry())
   {
     //Cash money dolla dolla bills yall
     m_cashMoney=m_cashMoney-mystery.getPrice();
@@ -53,8 +55,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
       }
       else
       {
-        //vomit
-        m_hp=m_hp/2;
+        vomit();
       }
     }
     else
@@ -69,6 +70,20 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
   {
     cout<<"You are nothing!"<<endl;
   }
+  return;
+}
+
+//Determins if the customer can eat the burger based upon their stats
+bool Customer::canEat(const Burger burg) const
+{
+  return(m_isAlive&&m_cashMoney>=burg.getPrice());
+}
+
+//Vomits
+void Customer::vomit()
+{
+  cout<<"*vomits*"<<endl;
+  m_hp=m_hp/2;
   return;
 }
 
@@ -89,6 +104,7 @@ ostream& operator<<(ostream& os, const Customer& rhs)
     <<" health.";
   return os;
 }
+/*******************************************************/
 
 /*********Getter functions******************/
 double Customer::cashMoney() const
@@ -122,7 +138,7 @@ int Customer::hp() const
 }
 /************************************************/
 
-//Private functions
+/********Private functions************************/
 //Get's a random name from the names list
 void Customer::randomName()
 {
@@ -137,8 +153,4 @@ void Customer::randomName()
   names.close();
   return;
 }
-
-bool Customer::canEat(const Burger burg) const
-{
-  return(m_isAlive&&m_cashMoney>=burg.getPrice());
-}
+/*****************************************************/

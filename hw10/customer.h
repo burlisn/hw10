@@ -27,7 +27,7 @@ class Customer
     //Description: Creates a random Customer
     //Pre: Nothing
     //Post: Random Customer with various attributes is created (note, only
-    //     24 Customers)
+    //     24 Customers possible)
     Customer();
     
     //Eat function
@@ -36,6 +36,10 @@ class Customer
     //Post: Customer money, weight, cholesterol, and Alive status is affected
     //      by the eaten burger
     void eat(const Burger mystery, Burgermeister& krusty);
+
+    bool canEat(const Burger burg) const;
+
+    void vomit();
 
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
@@ -69,8 +73,6 @@ class Customer
     //Pre: None
     //Post: Random name from the file is pulled for a new Customer
     void randomName();
-
-    bool canEat(const Burger burg) const;
 };
 
 #endif
