@@ -23,6 +23,7 @@ Customer::Customer()
   m_isContestant=1;
   m_maxWeight=m_weight+80;
   m_isPath=0;
+  m_isVomiting=0;
 }
 /**********************************************************/
 
@@ -50,7 +51,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     //Dead boy?
     if(mystery.isPathogen())
     {
-      int diceRoll=rand()%101;
+      int diceRoll=rand()%102+1;
       if(diceRoll>m_hp)
       {
         m_isPath=1;
@@ -83,6 +84,7 @@ void Customer::vomit()
 {
   cout<<m_name<<"*vomits*"<<endl;
   m_hp=m_hp/2;
+  m_isVomiting=1;
   return;
 }
 
@@ -110,6 +112,24 @@ void Customer::hpLoss()
     m_hp=0;
   }
   return;
+}
+
+void Customer::allClear()
+{
+  m_isVomiting=0;
+  return;
+}
+
+void Customer::chuck(const Burger burg)
+{
+  m_hp+=2;
+  m_cashMoney-=burg.getPrice();
+  return;
+}
+
+bool Customer::canChuck(const Burger burg) const
+{
+  return(m_cashMoney>=burg.getPrice());
 }
 
 //insertion operator overload
@@ -160,6 +180,11 @@ string Customer::name() const
 int Customer::hp() const
 {
   return(m_hp);
+}
+
+bool Customer::getVomiting() const
+{
+  return(m_isVomiting);
 }
 /************************************************/
 

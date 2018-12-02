@@ -45,6 +45,12 @@ class Customer
 
     void hpLoss();
 
+    void allClear();
+
+    void chuck(const Burger burg);
+    
+    bool canChuck(const Burger burg) const;
+
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
     //Pre: Nothing
@@ -55,6 +61,7 @@ class Customer
     bool isAlive() const;
     string name() const;
     int hp() const;
+    bool getVomiting() const;
 
     //insertion operator overlaod
     //Description: Overloads the insertion operator to output status of
@@ -72,6 +79,7 @@ class Customer
     int m_hp; //Customers health points
     bool m_isContestant; //Is the Customer still a contestant?
     bool m_isPath; //True if no pathogen
+    bool m_isVomiting;
 
     int m_maxWeight; //Get's initialized to the customers original weight+80
 
