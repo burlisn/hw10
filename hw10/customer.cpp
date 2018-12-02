@@ -81,7 +81,7 @@ bool Customer::canEat(const Burger burg) const
 //Vomits
 void Customer::vomit()
 {
-  cout<<"*vomits*"<<endl;
+  cout<<m_name<<"*vomits*"<<endl;
   m_hp=m_hp/2;
   return;
 }

@@ -35,21 +35,19 @@ int main()
 
   while(contest)
   {
+    contest=0; //Ready to end contest for every round
     cout<<"Round "<<roundNumber<<endl;
-    for(int i=1;i<15;i++)
+    for(int i=0;i<15;i++)
     {
       Burger a;
       if(customer[i].canEat(a))
       {
         cout<<customer[i].name()<<" eats "<<a.getName()<<endl;
         customer[i].eat(a,krusty);
+        contest=1; //Since a customer ate, contest still runs
       }
     }
     roundNumber++;
-    if(roundNumber==5)
-    {
-      contest=0;
-    }
   }
 
 
