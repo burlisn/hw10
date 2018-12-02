@@ -20,6 +20,9 @@ Customer::Customer()
   m_chol=(rand()%271)+30;
   m_isAlive=1;
   m_hp=rand()%100+1;
+  m_isContestant=1;
+  m_maxWeight=m_weight+80;
+  m_isPath=0;
 }
 /**********************************************************/
 
@@ -42,7 +45,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     2.1*mystery.isSauce();
 
     //HP loss from eating burger
-    m_hp=m_hp-2;
+    hpLoss();
 
     //Dead boy?
     if(mystery.isPathogen())
@@ -50,18 +53,14 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
       int diceRoll=rand()%101;
       if(diceRoll>m_hp)
       {
-        m_isAlive=0;
-        m_hp=0;
+        m_isPath=1;
       }
       else
       {
         vomit();
       }
     }
-    else
-    {
-      m_isAlive=1;
-    }
+    grimReaper();
 
     //Pay Krusty
     krusty+=mystery.getPrice();
@@ -76,7 +75,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
 //Determins if the customer can eat the burger based upon their stats
 bool Customer::canEat(const Burger burg) const
 {
-  return(m_isAlive&&m_cashMoney>=burg.getPrice());
+  return(m_isAlive&&m_cashMoney>=burg.getPrice()&&m_isContestant);
 }
 
 //Vomits
@@ -84,6 +83,32 @@ void Customer::vomit()
 {
   cout<<"*vomits*"<<endl;
   m_hp=m_hp/2;
+  return;
+}
+
+//If conditions are right, customer dies!
+void Customer::grimReaper()
+{
+  if(m_chol>300||m_weight>=m_maxWeight||m_isPath||m_hp==0)
+  {
+    m_isAlive=0;
+    m_hp=0;
+    m_isContestant=0;
+  }
+  return;
+}
+
+//Subtracts hp for eating burger, doesn't let hp go below 0
+void Customer::hpLoss()
+{
+  if(m_hp-2>=0)
+  {
+    m_hp=m_hp-2;
+  }
+  else
+  {
+    m_hp=0;
+  }
   return;
 }
 

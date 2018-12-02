@@ -41,6 +41,10 @@ class Customer
 
     void vomit();
 
+    void grimReaper();
+
+    void hpLoss();
+
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
     //Pre: Nothing
@@ -66,6 +70,10 @@ class Customer
     short m_chol; //Cholesterol level
     bool m_isAlive; //Is the Customer alive?
     int m_hp; //Customers health points
+    bool m_isContestant; //Is the Customer still a contestant?
+    bool m_isPath; //True if no pathogen
+
+    int m_maxWeight; //Get's initialized to the customers original weight+80
 
     int m_nameCount=0;//Where the count is on the name file
 
