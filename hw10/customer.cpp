@@ -63,6 +63,9 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     }
     grimReaper(krusty);
 
+    cout<<"hp "<<m_hp<<", wt "<<m_weight<<", $"<<m_cashMoney<<", chol "
+        <<m_chol<<", "<<m_isAlive<<"."<<endl;
+
     //Pay Krusty
     krusty+=mystery.getPrice();
   }
@@ -82,7 +85,7 @@ bool Customer::canEat(const Burger burg) const
 //Vomits
 void Customer::vomit()
 {
-  cout<<m_name<<"*vomits*"<<endl;
+  cout<<m_name<<" *vomits* "<<endl;
   if(m_hp/2>0) //Accounts for the specific case where their hp is 1 and
   {            //vomiting would make their hp=0
     m_hp=m_hp/2;

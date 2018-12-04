@@ -13,4 +13,5 @@ void chainReaction(Customer customer[], const int SIZE, int j,
 int foodFight(Customer customer[], const int SIZE, int j,
               Burgermeister& krusty);
 
+
 #endif

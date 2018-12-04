@@ -46,16 +46,23 @@ int main()
       Burger a;
       if(customer[i].canEat(a))
       {
-        cout<<customer[i]<<" eats "<<a.getName()<<endl;
+        cout<<customer[i].name()<<" eats "<<a.getName()<<" ";
         customer[i].eat(a,krusty);
-        // cout<<customer[i]<<endl;
         if(customer[i].getVomiting())
         {
           chainReaction(customer,SIZE,i,krusty);
           krusty.payVomit(); //Krusty pays $5 for customer vomiting
           customer[i].allClear();
         }
-        contest=1; //Since a customer ate, contest still runs
+        contest=1;
+      }
+    }
+    if(!contest)
+    {
+      cout<<"No on could eat a burger! Contest is over!"<<endl;
+      for(int i=0;i<SIZE;i++)
+      {
+        cout<<customer[i].isAlive()<<endl;
       }
     }
     roundNumber++;
