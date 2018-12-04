@@ -46,9 +46,9 @@ int main()
       Burger a;
       if(customer[i].canEat(a))
       {
-        cout<<customer[i]<<" eats "<<a.getName();
+        cout<<customer[i]<<" eats "<<a.getName()<<endl;
         customer[i].eat(a,krusty);
-        cout<<customer[i]<<endl;
+        // cout<<customer[i]<<endl;
         if(customer[i].getVomiting())
         {
           chainReaction(customer,SIZE,i,krusty);
