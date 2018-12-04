@@ -22,6 +22,9 @@ class Burgermeister
     double getCashMoney() const;
     string getName() const;
 
+    void payVomit();
+    void payDeath();
+
   private:
     string m_name;
     double m_cashMoney;

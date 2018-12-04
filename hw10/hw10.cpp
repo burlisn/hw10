@@ -52,7 +52,7 @@ int main()
         if(customer[i].getVomiting())
         {
           chainReaction(customer,SIZE,i,krusty);
-          krusty-=5; //Krusty pays $5 for customer vomiting
+          krusty.payVomit(); //Krusty pays $5 for customer vomiting
           customer[i].allClear();
         }
         contest=1; //Since a customer ate, contest still runs

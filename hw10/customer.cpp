@@ -61,7 +61,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
         vomit();
       }
     }
-    grimReaper();
+    grimReaper(krusty);
 
     //Pay Krusty
     krusty+=mystery.getPrice();
@@ -83,19 +83,27 @@ bool Customer::canEat(const Burger burg) const
 void Customer::vomit()
 {
   cout<<m_name<<"*vomits*"<<endl;
-  m_hp=m_hp/2;
+  if(m_hp/2>0) //Accounts for the specific case where their hp is 1 and
+  {            //vomiting would make their hp=0
+    m_hp=m_hp/2;
+  }
+  else
+  {
+    m_hp=1;  
+  }
   m_isVomiting=1;
   return;
 }
 
 //If conditions are right, customer dies!
-void Customer::grimReaper()
+void Customer::grimReaper(Burgermeister& krusty)
 {
   if(m_chol>300||m_weight>=m_maxWeight||m_isPath||m_hp==0)
   {
     m_isAlive=0;
     m_hp=0;
     m_isContestant=0;
+    krusty.payDeath();
   }
   return;
 }

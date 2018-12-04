@@ -41,7 +41,7 @@ class Customer
 
     void vomit();
 
-    void grimReaper();
+    void grimReaper(Burgermeister& krusty);
 
     void hpLoss();
 

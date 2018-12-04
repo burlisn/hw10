@@ -35,3 +35,30 @@ string Burgermeister::getName() const
 {
   return m_name;
 }
+/**********************************************************/
+
+void Burgermeister::payDeath()
+{
+  if(m_cashMoney-35>=0)
+  {
+    m_cashMoney-=35;
+  }
+  else //If he can't pay it all, krusty pays what he has
+  {
+    m_cashMoney=0;
+  }
+  return;
+}
+
+void Burgermeister::payVomit()
+{
+  if(m_cashMoney-5>=0)
+  {
+    m_cashMoney-=5;
+  }
+  else
+  {
+    m_cashMoney=0; //If he can't pay it all, krusty pays what he has
+  }
+  return;
+}

@@ -9,7 +9,7 @@ void chainReaction(Customer customer[], const int SIZE, int j,
     if(rand()%2==1&&customer[i].isAlive())
     {
       customer[i].vomit();
-      krusty-=5; //Krusty pays for vomiting
+      krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive())
     {
@@ -28,7 +28,7 @@ void chainReaction(Customer customer[], const int SIZE, int j,
     if(rand()%2==1&&customer[i].isAlive()) //If true they vomit
     {
       customer[i].vomit();
-      krusty-=5; //Krusty pays for vomiting
+      krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive()) //If they don't vomit but
     {                                            //start food fight
