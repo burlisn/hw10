@@ -1,6 +1,7 @@
 #include "helper.h"
 
-void chainReaction(Customer customer[], const int SIZE, int j)
+void chainReaction(Customer customer[], const int SIZE, int j,
+                   Burgermeister& krusty)
 {
   //Walking up the array
   for(int i=j+1; i<SIZE&&i!=-1; i++)
@@ -11,7 +12,7 @@ void chainReaction(Customer customer[], const int SIZE, int j)
     }
     else if(rand()%10<=6&&customer[i].isAlive())
     {
-      i=foodFight(customer, SIZE, i);
+      i=foodFight(customer, SIZE, i,krusty);
     }
     else
     {
@@ -29,7 +30,7 @@ void chainReaction(Customer customer[], const int SIZE, int j)
     }
     else if(rand()%10<=6&&customer[i].isAlive())
     {
-      i=foodFight(customer, SIZE, i);
+      i=foodFight(customer, SIZE, i,krusty);
     }
     else
     {
@@ -40,7 +41,8 @@ void chainReaction(Customer customer[], const int SIZE, int j)
   return;
 }
 
-int foodFight(Customer customer[], const int SIZE, int j)
+int foodFight(Customer customer[], const int SIZE, int j,
+              Burgermeister& krusty)
 {
   int p=SIZE;
   bool fight=1;
@@ -51,6 +53,9 @@ int foodFight(Customer customer[], const int SIZE, int j)
     if(target==15&&customer[j].canChuck(a)) //Krusty is hit
     {
       customer[j].chuck(a);
+      krusty+=customer[j].cashMoney();
+      customer[j].setCashMoney(0);
+      customer[j].disqualify();
       cout<<customer[j].name()<<" hits Krusty!"<<endl;
       fight=0;
     }

@@ -51,6 +51,11 @@ class Customer
     
     bool canChuck(const Burger burg) const;
 
+    //Setter functions
+    void setCashMoney(double money);
+
+    void disqualify();
+
     //Getter functions
     //Descriptions: Functions return the status of the attributes when called
     //Pre: Nothing

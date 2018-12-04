@@ -151,6 +151,18 @@ ostream& operator<<(ostream& os, const Customer& rhs)
 }
 /*******************************************************/
 
+/***********Setter functions*****************/
+void Customer::setCashMoney(double money)
+{
+  m_cashMoney=money;
+}
+
+void Customer::disqualify()
+{
+  m_isContestant=0;
+}
+/********************************************/
+
 /*********Getter functions******************/
 double Customer::cashMoney() const
 {

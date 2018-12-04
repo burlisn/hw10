@@ -51,7 +51,7 @@ int main()
         cout<<customer[i]<<endl;
         if(customer[i].getVomiting())
         {
-          chainReaction(customer,SIZE,i);
+          chainReaction(customer,SIZE,i,krusty);
           customer[i].allClear();
         }
         contest=1; //Since a customer ate, contest still runs
