@@ -69,7 +69,7 @@ class Customer
     bool getVomiting() const;
     bool isContestant() const;
     int get_numEat() const;
-//    double get_weightGain() const;
+    double get_weightGain() const;
 
     //insertion operator overlaod
     //Description: Overloads the insertion operator to output status of
@@ -79,6 +79,7 @@ class Customer
     friend ostream& operator<<(ostream& os, const Customer& rhs);
 
   private:
+    double m_weightGain;
     string m_name;
     double m_cashMoney;
     double m_weight;
@@ -89,7 +90,6 @@ class Customer
     bool m_isPath; //True if no pathogen
     bool m_isVomiting;
     int m_numEat; //Amount of burgers eaten
-    double m_weightGain;
 
     int m_maxWeight; //Get's initialized to the customers original weight+80
 

@@ -80,14 +80,14 @@ int foodFight(Customer customer[], const int SIZE, int j,
   return p;
 }
 
-/*void declareWinner(Customer customer[], const int SIZE)
+void declareWinner(Customer customer[], const int SIZE)
 {
   int burgEatWin=0;
   int maxBurgEat=0;
   bool needWeightGain=0;
   double maxWeightGain=0;
   
-  if(numAliveCont(customer,SIZE)>1)
+  if(numAliveCont(customer,SIZE)>=1)
   {
     for(int i=0;i<SIZE;i++)
     {
@@ -105,6 +105,10 @@ int foodFight(Customer customer[], const int SIZE, int j,
         }
       }
     }
+  }
+  else
+  {
+    cout<<"THEY'RE ALL DEAD!";
   }
   if(needWeightGain)
   {
@@ -135,4 +139,3 @@ int numAliveCont(Customer customer[], const int SIZE)
   }
   return (numAliveCont);
 }
-*/

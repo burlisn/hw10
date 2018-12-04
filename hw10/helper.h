@@ -16,11 +16,9 @@ void chainReaction(Customer customer[], const int SIZE, int j,
 int foodFight(Customer customer[], const int SIZE, int j,
               Burgermeister& krusty);
 
-/*void declareWinner(Customer customer[], const int SIZE);
-
-int numAlive(Customer customer[], const int SIZE);
+void declareWinner(Customer customer[], const int SIZE);
 
 int numAliveCont(Customer customer[], const int SIZE);
-*/
+
 
 #endif

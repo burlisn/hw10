@@ -25,8 +25,8 @@ Customer::Customer()
   m_maxWeight=m_weight+80;
   m_isPath=0;
   m_isVomiting=0;
-  // m_numEat=0;
-  // m_weightGain=0;
+  m_numEat=0;
+  m_weightGain=0;
 }
 /**********************************************************/
 
@@ -48,10 +48,10 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
 
-    /*m_weightGain=m_weightGain+0.5*pow(mystery.getPatties(),2)+(1/8)*
+    m_weightGain=m_weightGain+0.5*pow(mystery.getPatties(),2)+(1/8)*
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
-*/
+
     //HP loss from eating burger
     hpLoss();
 
@@ -231,10 +231,10 @@ int Customer::get_numEat() const
   return(m_numEat);
 }
 
-/*double Customer::get_weightGain() const
+double Customer::get_weightGain() const
 {
   return(m_weightGain);
-}*/
+}
 /************************************************/
 
 /********Private functions************************/

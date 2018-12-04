@@ -57,28 +57,40 @@ int main()
         contest=1;
       }
     }
-    if(!contest)
-    {
-      cout<<"No one could eat a burger! Contest is over!"<<endl;
-      //declareWinner(customer,SIZE);
-      for(int i=0;i<SIZE;i++)
-      {
-        cout<<customer[i].isAlive()<<endl;
-      }
-    }
     roundNumber++;
   }
+  
+  cout<<"No one could eat a burger! Contest is over!"<<endl;
 
-
-  /*
-  for(int i=0;i<20;i++)
+  cout<<"-------------------SURVIVING CONTESTANTS-------------------"<<endl;
+  for(int i=0;i<SIZE;i++)
   {
-    cout<<customer[0]<<endl;
-    Burger a;
-    cout<<a<<endl;
-    customer[0].eat(a,krusty);
-    cout<<krusty.getCashMoney()<<endl;
+    if(customer[i].isAlive())
+    cout<<customer[i]<<endl;
   }
-  */
+  declareWinner(customer,SIZE);
+  cout<<endl;
+  cout<<"-------------------------------------------------------------"<<endl;
+
+  cout<<"------------------------KRUSTY------------------------"<<endl
+      <<"Final money: $"<<krusty.getCashMoney()<<endl;
+  if(krusty.getCashMoney()<100)
+  {
+    cout<<"Krusty lost: $"<<(krusty.getCashMoney()-100)*-1<<endl;
+  }
+  else if(krusty.getCashMoney()>100)
+  {
+    cout<<"Krusty gained: $"<<(krusty.getCashMoney()-100)<<endl;
+  }
+  else if(krusty.getCashMoney()==0)
+  {
+    cout<<"Krusty went broke!"<<endl;
+  }
+  else if(krusty.getCashMoney()==100)
+  {
+    cout<<"Krusty broke even!"<<endl;
+  }
+  cout<<"------------------------------------------------------"<<endl;
+
   return 0;
 }
