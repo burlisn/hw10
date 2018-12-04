@@ -64,7 +64,7 @@ int foodFight(Customer customer[], const int SIZE, int j,
     else if(customer[target].isAlive()&&customer[j].canChuck(a))
     {
       customer[j].chuck(a);
-      cout<<customer[j].name()<<" hits "<<customer[target].name();
+      cout<<customer[j].name()<<" hits "<<customer[target].name()<<endl;
       j=target;
       if(rand()%10<=1)
       {
@@ -79,3 +79,60 @@ int foodFight(Customer customer[], const int SIZE, int j,
   p=-1;
   return p;
 }
+
+/*void declareWinner(Customer customer[], const int SIZE)
+{
+  int burgEatWin=0;
+  int maxBurgEat=0;
+  bool needWeightGain=0;
+  double maxWeightGain=0;
+  
+  if(numAliveCont(customer,SIZE)>1)
+  {
+    for(int i=0;i<SIZE;i++)
+    {
+      if(customer[i].isAlive()&&customer[i].isContestant())
+      {
+        if(customer[i].get_numEat()>maxBurgEat)
+        {
+          maxBurgEat=customer[i].get_numEat();
+          burgEatWin=i;
+          needWeightGain=0;
+        }
+        else if(customer[i].get_numEat()==maxBurgEat)
+        {
+          needWeightGain=1;
+        }
+      }
+    }
+  }
+  if(needWeightGain)
+  {
+    for(int i=0;i<SIZE;i++)
+    {
+      if(customer[i].isAlive()&&customer[i].isContestant())
+      {
+        if(customer[i].get_weightGain()>maxWeightGain)
+        {
+          burgEatWin=i;
+        }
+      }
+    }
+  }
+  cout<<"Customer "<<customer[burgEatWin].name()<<" is the Winner!";
+  return;
+}
+
+int numAliveCont(Customer customer[], const int SIZE)
+{
+  int numAliveCont=0;
+  for(int i=0;i<SIZE;i++)
+  {
+    if(customer[i].isAlive()&&customer[i].isContestant())
+    {
+      numAliveCont++;
+    }
+  }
+  return (numAliveCont);
+}
+*/

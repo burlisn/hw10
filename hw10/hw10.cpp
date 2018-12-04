@@ -59,7 +59,8 @@ int main()
     }
     if(!contest)
     {
-      cout<<"No on could eat a burger! Contest is over!"<<endl;
+      cout<<"No one could eat a burger! Contest is over!"<<endl;
+      //declareWinner(customer,SIZE);
       for(int i=0;i<SIZE;i++)
       {
         cout<<customer[i].isAlive()<<endl;

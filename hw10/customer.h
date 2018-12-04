@@ -67,6 +67,9 @@ class Customer
     string name() const;
     int hp() const;
     bool getVomiting() const;
+    bool isContestant() const;
+    int get_numEat() const;
+//    double get_weightGain() const;
 
     //insertion operator overlaod
     //Description: Overloads the insertion operator to output status of
@@ -85,6 +88,8 @@ class Customer
     bool m_isContestant; //Is the Customer still a contestant?
     bool m_isPath; //True if no pathogen
     bool m_isVomiting;
+    int m_numEat; //Amount of burgers eaten
+    double m_weightGain;
 
     int m_maxWeight; //Get's initialized to the customers original weight+80
 

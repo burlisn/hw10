@@ -8,6 +8,7 @@
 #include "customer.h"
 #include "burger.h"
 #include "burgermeister.h"
+#include "helper.h"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ Customer::Customer()
   m_maxWeight=m_weight+80;
   m_isPath=0;
   m_isVomiting=0;
+  // m_numEat=0;
+  // m_weightGain=0;
 }
 /**********************************************************/
 
@@ -45,8 +48,15 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
 
+    /*m_weightGain=m_weightGain+0.5*pow(mystery.getPatties(),2)+(1/8)*
+    pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
+    2.1*mystery.isSauce();
+*/
     //HP loss from eating burger
     hpLoss();
+
+    //Adds 1 to the number of burgers eaten
+    m_numEat++;
 
     //Dead boy?
     if(mystery.isPathogen())
@@ -85,7 +95,8 @@ bool Customer::canEat(const Burger burg) const
 //Vomits
 void Customer::vomit()
 {
-  cout<<m_name<<" *vomits* "<<endl;
+  int i=rand()%4;
+  cout<<m_name<<" "<<NOISE[i]<<" ";
   if(m_hp/2>0) //Accounts for the specific case where their hp is 1 and
   {            //vomiting would make their hp=0
     m_hp=m_hp/2;
@@ -209,6 +220,21 @@ bool Customer::getVomiting() const
 {
   return(m_isVomiting);
 }
+
+bool Customer::isContestant() const
+{
+  return(m_isContestant);
+}
+
+int Customer::get_numEat() const
+{
+  return(m_numEat);
+}
+
+/*double Customer::get_weightGain() const
+{
+  return(m_weightGain);
+}*/
 /************************************************/
 
 /********Private functions************************/
