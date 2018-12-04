@@ -40,7 +40,7 @@ int main()
   while(contest)
   {
     contest=0; //Ready to end contest for every round
-    cout<<"Round "<<roundNumber<<endl;
+    cout<<"------------------Round"<<roundNumber<<"------------------"<<endl;
     for(int i=0;i<SIZE;i++)
     {
       Burger a;
@@ -57,16 +57,23 @@ int main()
         contest=1;
       }
     }
+    if(!contest)
+    {
+      cout<<"No one can eat a burger! The contest is over!"<<endl;
+    }
+    cout<<"------------------------------------------"<<endl;
     roundNumber++;
   }
+
   
-  cout<<"No one could eat a burger! Contest is over!"<<endl;
 
   cout<<"-------------------SURVIVING CONTESTANTS-------------------"<<endl;
   for(int i=0;i<SIZE;i++)
   {
     if(customer[i].isAlive())
-    cout<<customer[i]<<endl;
+    cout<<customer[i].name()<<", Burgers eaten "<<customer[i].get_numEat()
+        <<", wt gained "<<customer[i].get_weightGain()<<", Contestant: "
+        <<customer[i].isContestant()<<endl;
   }
   declareWinner(customer,SIZE);
   cout<<endl;

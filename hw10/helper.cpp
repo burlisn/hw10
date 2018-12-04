@@ -3,12 +3,14 @@
 void chainReaction(Customer customer[], const int SIZE, int j,
                    Burgermeister& krusty)
 {
+  cout<<endl;
   //Walking up the array
   for(int i=j+1; i<SIZE&&i!=-1; i++)
   {
     if(rand()%2==1&&customer[i].isAlive())
     {
       customer[i].vomit();
+      cout<<endl;
       krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive())
@@ -28,6 +30,7 @@ void chainReaction(Customer customer[], const int SIZE, int j,
     if(rand()%2==1&&customer[i].isAlive()) //If true they vomit
     {
       customer[i].vomit();
+      cout<<endl;
       krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive()) //If they don't vomit but
@@ -48,10 +51,11 @@ int foodFight(Customer customer[], const int SIZE, int j,
 {
   int p=SIZE;
   bool fight=1;
+  int target=rand()%16;
   while(fight)
   {
     Burger a;
-    int target=rand()%16;
+//    int newTarget=rand()%16;
     if(target==15&&customer[j].canChuck(a)) //Krusty is hit
     {
       customer[j].chuck(a);
@@ -66,6 +70,7 @@ int foodFight(Customer customer[], const int SIZE, int j,
       customer[j].chuck(a);
       cout<<customer[j].name()<<" hits "<<customer[target].name()<<endl;
       j=target;
+      target=rand()%16;
       if(rand()%10<=1)
       {
         fight=0;

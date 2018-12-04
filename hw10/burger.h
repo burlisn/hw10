@@ -32,12 +32,10 @@ const string TWO_PICKLE = "Garden-Fresh";
 const string THREE_PICKLE = "Kermit";
 const string FOUR_PICKLE = "Too-Green";
 
-//Sauce-Boss
 const string ZERO_SAUCE = "Sauceless";
-const string ONE_SAUCE = "S-B";
+const string ONE_SAUCE = "Sauce-Boss";
 
-//Crime-Against-Humanity
-const string ZERO_CHEESE = "C-A-H";
+const string ZERO_CHEESE = "Crime-Against-Humanity";
 const string ONE_CHEESE = "Cheesy";
 
 const string VEGGIE_CASE = "Krusty Veggie Burger";
