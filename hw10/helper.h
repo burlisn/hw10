@@ -1,6 +1,6 @@
 // Programmer: Nathan Burlis & Mathew Romine
 // Date: 12/04/2018
-// Filename: burgermeister.h
+// Filename: helper.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
 // Purpose: This file contains the prototypes for all of the functions
