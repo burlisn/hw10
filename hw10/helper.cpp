@@ -129,10 +129,6 @@ void declareWinner(Customer customer[], const int SIZE)
       }
     }
   }
-  else
-  {
-    cout<<"THEY'RE ALL DEAD!";
-  }
   if(needWeightGain)
   {
     for(int i=0;i<SIZE;i++)
@@ -142,6 +138,7 @@ void declareWinner(Customer customer[], const int SIZE)
         if(customer[i].get_weightGain()>maxWeightGain)
         {
           burgEatWin=i;
+          maxWeightGain=customer[i].get_weightGain();
         }
       }
     }
@@ -149,6 +146,10 @@ void declareWinner(Customer customer[], const int SIZE)
   if(burgEatWin!=15)
   {
     cout<<"Customer "<<customer[burgEatWin].name()<<" is the Winner!";
+  }
+  else
+  {
+    cout<<"THEY'RE ALL DEAD!(or disqualified...)";
   }
   return;
 }
