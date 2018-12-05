@@ -3,7 +3,7 @@
 // Filename: burger.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose:
+// Purpose: potato123
 
 #ifndef BURGER_H
 #define BURGER_H
