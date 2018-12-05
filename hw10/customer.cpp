@@ -1,9 +1,10 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 11/08/2018
+// Date: 12/04/2018
 // Filename: customer.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: test test
+// Purpose: This file contains all of the functions, the constructor,
+//          and and the random name generator for customers/competitors.
 
 #include "customer.h"
 #include "burger.h"

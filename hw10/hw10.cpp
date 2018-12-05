@@ -1,9 +1,12 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 12/05/2018
+// Date: 12/04/2018
 // Filename: hw10.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: Potato man sam
+// Purpose: The purpose of this file is to run the competition, output
+//          nessicary information about the customers as the contest
+//          progresses. At the end, this program will output the winner of
+//          the contest, as well as the final results of Krusty's earnings.
 
 #include <iostream>
 #include "burger.h"
@@ -30,7 +33,7 @@ int main()
   bool contest=1; //While contest is true, the contest goes on!
   Customer customer[SIZE];
 
-  cout<<"-------------------ORIGIANAL CONTESTANTS-------------------"<<endl;
+  cout<<"-------------------ORIGINAL CONTESTANTS-------------------"<<endl;
   for(int i=0;i<SIZE;i++)
   {
     cout<<customer[i]<<endl;

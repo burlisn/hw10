@@ -1,5 +1,5 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 11/08/2018
+// Date: 12/04/2018
 // Filename: burgermeister.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
@@ -52,7 +52,7 @@ class Burgermeister
 
     // Description: This function's role is to subtract the amount from Krusty
     //              when one of his customer's vomits.
-    // Pre: colt 45 and 2 zig zags, baby thats all we neeeed
+    // Pre:
     // Post: Will subtract $5 from Krusty's total money amount
     void payVomit();
 

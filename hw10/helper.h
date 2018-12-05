@@ -1,3 +1,11 @@
+// Programmer: Nathan Burlis & Mathew Romine
+// Date: 12/04/2018
+// Filename: burgermeister.h
+// Course number & section: 1570 C
+// Instructor name: Yeung
+// Purpose: This file contains the prototypes for all of the functions
+//          nessicary to the competition, and interactions between the
+//          the competitiors.
 
 #ifndef HELPER_H
 #define HELPER_H

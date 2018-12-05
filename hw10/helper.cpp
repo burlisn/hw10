@@ -1,3 +1,12 @@
+// Programmer: Nathan Burlis & Mathew Romine
+// Date: 12/04/2018
+// Filename: burgermeister.h
+// Course number & section: 1570 C
+// Instructor name: Yeung
+// Purpose: This file contains the functions nessicary to run all of the
+//          interactions between customers, and holds the process for
+//          the competition. ex. Puking, Throwing Burgers, Krusty interactions
+
 #include "helper.h"
 
 //Starts the chain reaction that is the first vomit

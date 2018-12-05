@@ -1,9 +1,11 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 11/08/2018
+// Date: 12/04/2018
 // Filename: burgermeister.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose:
+// Purpose: This file contains all of the functions that pertain to Krusty
+//          and his interaction with any of the competitors during the
+//          competition.
 
 #include "burgermeister.h"
 

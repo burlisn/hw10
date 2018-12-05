@@ -1,9 +1,10 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 11/08/2018
+// Date: 12/04/2018
 // Filename: burger.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: dendi is washed up
+// Purpose: This file contains all of the nessicary information for the
+//          initialization of burger names as well as the burger class.
 
 #ifndef BURGER_H
 #define BURGER_H
