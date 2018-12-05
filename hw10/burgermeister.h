@@ -3,7 +3,7 @@
 // Filename: burgermeister.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: test
+// Purpose: carrot123
 
 #ifndef BURGERMEISTER_H
 #define BURGERMEISTER_H
