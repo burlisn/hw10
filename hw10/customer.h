@@ -3,7 +3,8 @@
 // Filename: customer.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose:
+// Purpose: customer.h holds the prototypes for all the functions and variables
+//          that are held within the Customer class
 
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
@@ -76,13 +77,31 @@ class Customer
     // Post: Customer is cleared of pathogen
     void allClear();
 
+    // Description: This function simulates the Customer throwing a Burger.
+    //              When the Customer throws a Burger they gain 2 hp but must
+    //              pay for the burger.
+    // Pre: The Burger the Customer is going to throw should be passed in as
+    //      the argument
+    // Post: Customer's hp is increased by 2 and they pay for the Burger.
     void chuck(const Burger burg);
     
+    // Description: This function returns a boolean value determining whether
+    //              or not the Customer can throw the Burger. The customer 
+    //              can throw the Burger if they can pay for it.
+    // Pre: The Burger the Customer is going to throw should be passed in as
+    //      the argument.
+    // Post: The boolean value determining whether
+    //       or not the Customer can throw the Burger is returned.
     bool canChuck(const Burger burg) const;
 
     //Setter functions
+    // Description: Sets the values for the m_cashMoney variable
+    // Pre: A money amount must be passed in as an argument
+    // Post: Customer's cash money is that value
     void setCashMoney(double money);
-
+    // Description: Set's the value m_contestant to 0, disqualifying them
+    // Pre: None
+    // Post: Customer is disqualified
     void disqualify();
 
     //Getter functions
