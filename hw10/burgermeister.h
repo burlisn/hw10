@@ -3,7 +3,8 @@
 // Filename: burgermeister.h
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose: carrot123
+// Purpose: burgermeister.h holds the prototypes for all the functions
+//          and variables that are held within the Burgermeister class (Krusty)
 
 #ifndef BURGERMEISTER_H
 #define BURGERMEISTER_H
@@ -38,11 +39,27 @@ class Burgermeister
     void operator-=(const double rhs);
 
     // Getter functions
-    // Description: 
+    // Description: getCashMoney will obtain the current amount of money either
+    //              the customer or Krusty has.
+    // Pre: None
+    // Post: Will output the total amount of money of the subject
     double getCashMoney() const;
+    
+    // Description: getName is the function that outputs Krusty's name
+    // Pre: None
+    // Post: Will output Krusty's name when called
     string getName() const;
 
+    // Description: This function's role is to subtract the amount from Krusty
+    //              when one of his customer's vomits.
+    // Pre: None
+    // Post: Will subtract $5 from Krusty's total money amount
     void payVomit();
+
+    // Description: This function's role is to subtract the amount from Krusty
+    //              when one of his customer's dies.
+    // Pre: None
+    // Post: Will subtract $5 from Krusty's total money amount
     void payDeath();
 
   private:
