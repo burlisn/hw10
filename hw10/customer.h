@@ -37,8 +37,18 @@ class Customer
     //      by the eaten burger
     void eat(const Burger mystery, Burgermeister& krusty);
 
+    // Description: Determins whether a Customer can eat a Burger depending on
+    //              the Burger stats and the customers stats
+    // Pre: Customer must be alive, must be able to pay for the Burger, and
+    //      must still be a contestant to eat
+    // Post: Returns a boolean value determining whether or not a Customer can
+    //       eat the given Burger
     bool canEat(const Burger burg) const;
 
+    // Description: The customer vomits, and they make a vomit noise and lose
+    //              half of their health
+    // Pre: None
+    // Post: Customer exclaims a vomit sound and loses half of their health
     void vomit();
 
     void grimReaper(Burgermeister& krusty);
