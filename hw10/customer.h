@@ -48,7 +48,7 @@ class Customer
     // Description: The customer vomits, and they make a vomit noise and lose
     //              half of their health
     // Pre: None
-    // Post: Customer exclaims a vomit sound and loses half of their health
+    // Post: Customer exclaims a vomit sound and loses half of their health (howdy)
     void vomit();
 
     void grimReaper(Burgermeister& krusty);
