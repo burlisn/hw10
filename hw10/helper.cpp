@@ -1,5 +1,6 @@
 #include "helper.h"
 
+//Starts the chain reaction that is the first vomit
 void chainReaction(Customer customer[], const int SIZE, int j,
                    Burgermeister& krusty)
 {
@@ -49,6 +50,8 @@ void chainReaction(Customer customer[], const int SIZE, int j,
   return;
 }
 
+
+//Simulates the food fight
 int foodFight(Customer customer[], const int SIZE, int j,
               Burgermeister& krusty)
 {
@@ -75,18 +78,22 @@ int foodFight(Customer customer[], const int SIZE, int j,
       target=rand()%16;
       if(rand()%10<=1)
       {
+        cout<<"\t\t"<<customer[j].name()<<" decides not to chuck."<<endl;
         fight=0;
       }
     }
     else
     {
       fight=0;
+      cout<<"\t\t"<<customer[j].name()<<" decides not to chuck."<<endl;
     } 
   }
   p=-1;
   return p;
 }
 
+
+//Declares the winner depending on the conditions
 void declareWinner(Customer customer[], const int SIZE)
 {
   int burgEatWin=15;
@@ -137,6 +144,7 @@ void declareWinner(Customer customer[], const int SIZE)
   return;
 }
 
+//Counts the number of alive contestants (aren't disqualified)
 int numAliveCont(Customer customer[], const int SIZE)
 {
   int numAliveCont=0;

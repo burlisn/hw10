@@ -46,11 +46,12 @@ const string KORONARY_CASE = "Krusty Koronary Burger";
 class Burger 
 {
   public:
-    //Cunstructors
-    //Description: If user wants to create specific burger, this function allows
-    //             that
-    //Pre: User enters patty, bacon, pickle amounts, states whether cheese,
-    //     sauce, and pathogen are on burger
+    // Cunstructors
+    // Description: If user wants to create specific burger, this function
+    //              allows that
+    // Pre: User enters patty, bacon, pickle amounts, states whether cheese,
+    //      sauce, and pathogen are on burger
+    // Post: Burger with specifications is created
     Burger(const int pat, const int bac, const int pick,
            const bool isCheese, const bool isSauce, const bool isPathogen);
     
@@ -117,7 +118,6 @@ class Burger
     //Pre: None
     //Post: Pathogen status is applied to m_isPathogen;
     void pathogen();
-
 };
 
 #endif

@@ -85,7 +85,7 @@ string Burger::getName() const
 
 
 //Private functions
-//10% chance for burger pathogen
+// 10% chance for burger pathogen
 void Burger::pathogen()
 {
   int x=rand()%10;
@@ -100,6 +100,7 @@ void Burger::pathogen()
   return;
 }
 
+// Checks to make sure burger is valid entry (if user entered)
 bool Burger::validEntry() const
 {
   bool isValid;
@@ -212,7 +213,7 @@ void Burger::createName()
   return;
 }
 
-//Insertion operator overload
+//Insertion operator overload for Burger
 ostream& operator<<(ostream& os, const Burger& rhs)
 {
   if(rhs.validEntry())
