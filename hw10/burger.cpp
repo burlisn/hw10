@@ -1,9 +1,10 @@
 // Programmer: Nathan Burlis & Mathew Romine
-// Date: 11/08/2018
+// Date: 12/04/2018
 // Filename: burger.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose:
+// Purpose: This file contains all the nessicary functions to create the names
+//          for the burgers, as well as calculate the costs.
 
 #include "burger.h"
 #include "customer.h"
