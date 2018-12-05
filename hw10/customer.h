@@ -48,13 +48,32 @@ class Customer
     // Description: The customer vomits, and they make a vomit noise and lose
     //              half of their health
     // Pre: None
-    // Post: Customer exclaims a vomit sound and loses half of their health (howdy)
+    // Post: Customer exclaims a vomit sound and loses half of their health
     void vomit();
 
+    // Description: The grimReaper function decides the fate of the Customer
+    //              depending on their stats. When called the grimReaper may
+    //              kill the Customer if their cholesterol is over 300, or their
+    //              weight exceeds their max weight, or if they are infected
+    //              with a pathogen. It will also set them to a non-contestant
+    //              if they die, or are already dead. It also has krusty pay 
+    //              for their death.
+    // Pre: krusty object must be passed in as a pass by reference argument
+    // Post: If successful, the customer is dead, no longer a contestant,
+    //       and krusty pays
     void grimReaper(Burgermeister& krusty);
 
+    // Description: This function subtracts hp from eating a Burger. Was
+    //              created so that your hp doensn't go below 0 when eating
+    //              Burgers.
+    // Pre: None
+    // Post: hp is subtracted by 2, or becomes 0
     void hpLoss();
 
+    // Description: Clears the Customer of their pathogen infection whether
+    //              they vomit or die (vomit it gets expelled, die it dies too)
+    // Pre: None
+    // Post: Customer is cleared of pathogen
     void allClear();
 
     void chuck(const Burger burg);
