@@ -3,7 +3,7 @@
 // Filename: hw10.cpp
 // Course number & section: 1570 C
 // Instructor name: Yeung
-// Purpose:
+// Purpose: Potato man sam
 
 #include <iostream>
 #include "burger.h"
