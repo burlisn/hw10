@@ -70,6 +70,8 @@ class Customer
     bool isContestant() const;
     int get_numEat() const;
     double get_weightGain() const;
+    string statusOutput() const; //Outputs the string of DEAD or ALIVE rather
+                                 //than bool value
 
     //insertion operator overlaod
     //Description: Overloads the insertion operator to output status of

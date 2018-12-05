@@ -48,6 +48,7 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
 
+    //Adds weight increass to weight gain variable
     m_weightGain=m_weightGain+0.5*pow(mystery.getPatties(),2)+(1/8)*
     pow(mystery.getBacon(),2)-mystery.getPickles()/4+1.2*mystery.isCheese()+
     2.1*mystery.isSauce();
@@ -73,8 +74,8 @@ void Customer::eat(const Burger mystery, Burgermeister& krusty)
     }
     grimReaper(krusty);
 
-    cout<<"hp "<<m_hp<<", wt "<<m_weight<<", $"<<m_cashMoney<<", chol "
-        <<m_chol<<", "<<m_isAlive<<"."<<endl;
+    cout<<"(hp "<<m_hp<<", wt "<<m_weight<<", $"<<m_cashMoney<<", chol "
+        <<m_chol<<", "<<statusOutput()<<")"<<endl;
 
     //Pay Krusty
     krusty+=mystery.getPrice();
@@ -234,6 +235,14 @@ int Customer::get_numEat() const
 double Customer::get_weightGain() const
 {
   return(m_weightGain);
+}
+
+string Customer::statusOutput() const
+{
+  if(m_isAlive)
+    return ("ALIVE");
+  else
+    return("DEAD");
 }
 /************************************************/
 

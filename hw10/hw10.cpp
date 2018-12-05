@@ -30,10 +30,12 @@ int main()
   bool contest=1; //While contest is true, the contest goes on!
   Customer customer[SIZE];
 
+  cout<<"-------------------ORIGIANAL CONTESTANTS-------------------"<<endl;
   for(int i=0;i<SIZE;i++)
   {
     cout<<customer[i]<<endl;
   }
+  cout<<"-----------------------------------------------------------"<<endl;
 
   cout<<endl;
 
@@ -46,7 +48,7 @@ int main()
       Burger a;
       if(customer[i].canEat(a))
       {
-        cout<<customer[i].name()<<" eats "<<a.getName()<<" ";
+        cout<<customer[i].name()<<" eats "<<a.getName()<<". ";
         customer[i].eat(a,krusty);
         if(customer[i].getVomiting())
         {

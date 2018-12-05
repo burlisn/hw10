@@ -3,19 +3,20 @@
 void chainReaction(Customer customer[], const int SIZE, int j,
                    Burgermeister& krusty)
 {
-  cout<<endl;
-  //Walking up the array
-  for(int i=j+1; i<SIZE&&i!=-1; i++)
+  //Walking up the array &&i!=-1
+  for(int i=j+1; i<SIZE; i++)
   {
     if(rand()%2==1&&customer[i].isAlive())
     {
+      cout<<"\t";
       customer[i].vomit();
       cout<<endl;
       krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive())
     {
-      i=foodFight(customer, SIZE, i,krusty);
+      foodFight(customer, SIZE, i,krusty);
+      i=SIZE;
     }
     else
     {
@@ -29,13 +30,15 @@ void chainReaction(Customer customer[], const int SIZE, int j,
   {
     if(rand()%2==1&&customer[i].isAlive()) //If true they vomit
     {
+      cout<<"\t";
       customer[i].vomit();
       cout<<endl;
       krusty.payVomit(); //Krusty pays for vomiting
     }
     else if(rand()%10<=6&&customer[i].isAlive()) //If they don't vomit but
     {                                            //start food fight
-      i=foodFight(customer, SIZE, i,krusty);
+      foodFight(customer,SIZE,i,krusty);
+      i=-1;
     }
     else
     {
@@ -55,20 +58,19 @@ int foodFight(Customer customer[], const int SIZE, int j,
   while(fight)
   {
     Burger a;
-//    int newTarget=rand()%16;
     if(target==15&&customer[j].canChuck(a)) //Krusty is hit
     {
       customer[j].chuck(a);
       krusty+=customer[j].cashMoney();
       customer[j].setCashMoney(0);
       customer[j].disqualify();
-      cout<<customer[j].name()<<" hits Krusty!"<<endl;
+      cout<<"\t\t"<<customer[j].name()<<" hits Krusty!"<<endl;
       fight=0;
     }
     else if(customer[target].isAlive()&&customer[j].canChuck(a))
     {
       customer[j].chuck(a);
-      cout<<customer[j].name()<<" hits "<<customer[target].name()<<endl;
+      cout<<"\t\t"<<customer[j].name()<<" hits "<<customer[target].name()<<endl;
       j=target;
       target=rand()%16;
       if(rand()%10<=1)
@@ -87,7 +89,7 @@ int foodFight(Customer customer[], const int SIZE, int j,
 
 void declareWinner(Customer customer[], const int SIZE)
 {
-  int burgEatWin=0;
+  int burgEatWin=15;
   int maxBurgEat=0;
   bool needWeightGain=0;
   double maxWeightGain=0;
@@ -128,7 +130,10 @@ void declareWinner(Customer customer[], const int SIZE)
       }
     }
   }
-  cout<<"Customer "<<customer[burgEatWin].name()<<" is the Winner!";
+  if(burgEatWin!=15)
+  {
+    cout<<"Customer "<<customer[burgEatWin].name()<<" is the Winner!";
+  }
   return;
 }
 
