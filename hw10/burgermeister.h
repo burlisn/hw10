@@ -53,7 +53,7 @@ class Burgermeister
     // Description: This function's role is to subtract the amount from Krusty
     //              when one of his customer's vomits.
     // Pre: EG
-    // Post: Will subtract $5 from Krusty's total money amount
+    // Post: Will subtract $5 from Krusty's total money amount (howdy)
     void payVomit();
 
     // Description: This function's role is to subtract the amount from Krusty
